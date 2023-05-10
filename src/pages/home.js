@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       <h1>Home</h1>
-      <button><a href="/signup">Signup</a></button>
+      <button><a href="/SignupPage">Signup</a></button>
     </div>
   );
 };
