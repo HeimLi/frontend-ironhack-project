@@ -29,7 +29,7 @@ function LoginPage(props) {
         
         storeToken(response.data.authToken);
         authenticateUser();
-        navigate("/");
+        navigate("/Profile");
       })
       .catch((error) => {
       	const errorDescription = error.response.data.message;
@@ -40,18 +40,19 @@ function LoginPage(props) {
   return (
     <div className="LoginPage">
       <h1>Login</h1>
-
+      <br />
       <form onSubmit={handleLoginSubmit}>
         <label>Email:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
-
+       
         <label>Password:</label>
         <input type="password" name="password" value={password} onChange={handlePassword} />
-
-        <button type="submit">Login</button>
+        <br />
+        <br />
+        <button type="submit"> Log in</button>
       </form>
       { errorMessage && <p className="error-message">{errorMessage}</p> }
-
+      <br />
       <p>Don't have an account yet?</p>
       <Link to={"/signupPage"}> Sign Up</Link>
     </div>
