@@ -14,6 +14,8 @@ const Profile = () => {
       <h3>Do I have PMS?</h3>
       <button><a href="/addMood">Start mood-tracking here.</a></button>
       <br />
+      <button><a href="/myMoods">My Moods</a></button>
+      <br />
       <button><a href="/SignupPage">Logout</a></button>
     </div>
   );

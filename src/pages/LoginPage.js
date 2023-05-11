@@ -4,7 +4,7 @@ import { AuthContext } from "../context/auth.context";
 import authService from "../services/auth.service";
 
 
-function LoginPage(props) {
+function loginPage(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
@@ -38,7 +38,7 @@ function LoginPage(props) {
   };
   
   return (
-    <div className="LoginPage">
+    <div className="loginPage">
       <h1>Login</h1>
       <br />
       <form onSubmit={handleLoginSubmit}>
@@ -59,4 +59,4 @@ function LoginPage(props) {
   )
 }
 
-export default LoginPage;
+export default loginPage;

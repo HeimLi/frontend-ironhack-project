@@ -5,6 +5,7 @@ import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import Profile from './pages/profile';
 import AddMood from './pages/addMood';
+import MyMoods from './pages/myMoods';
 
 // import { useState } from "react";
 
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/LoginPage" element={<LoginPage />} />
         <Route exact path="/profile" element={<Profile />} /> 
         <Route exact path="/addMood" element={<AddMood />} />
+        <Route exact path="/myMoods" element={<MyMoods />} />
       </Routes>
     </div>
   );
