@@ -28,20 +28,59 @@ const MyMoods = () => {
 
   return (
     <div className="addMoodPage">
-      <h1>My Moods </h1>
-      <ul>
+      <h1> My mood-collection: </h1>
+      <ul className="showMoods">
       {moods.map((mood) => {
         return (
-            <li key={mood._id}>{mood.day}</li>
+            <li key={mood._id}>{getEmojiForMood(mood.mood)}</li>
         )
       }
       )}
       </ul>
-    <button><a href="/SignupPage">Logout</a></button>
-    <br />
+      <br />
+      <h2> Before work: </h2>
+      <ul className="showMoods">
+      {moods.map((mood) => {
+        if (mood.daytime === "before work") {
+            return (<li key={mood._id}>{getEmojiForMood(mood.mood)}</li>)
+        }
+      }
+      )}
+      </ul>
+      <h2> After work: </h2>
+      <ul className="showMoods">
+      {moods.map((mood) => {
+        if (mood.daytime === "after work") {
+            return (<li key={mood._id}>{getEmojiForMood(mood.mood)}</li>)
+        }
+      }
+      )}
+      </ul>
+      <br />
     <button><a href="/Profile">Back to Profile</a></button>
+    <br />
+    <button><a href="/SignupPage">Logout</a></button>
     </div>
   );
+
+  function getEmojiForMood(mood) {
+    switch (mood) {
+        case "exited":
+        return "🤩";
+        case "happy":
+        return "😊";
+        case "neutral":
+        return "😶";
+        case "bored":
+        return "🥱";
+        case "sad":
+        return "😞";
+        case "depressed":
+        return "😭";
+      default:
+        return "";
+    }
+  }
 }
 
 export default MyMoods;

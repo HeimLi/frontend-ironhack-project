@@ -57,3 +57,16 @@ html {
     transform: rotate(360deg);
   }
 }
+
+.showMoods {
+  flex-direction: row;
+  display: flex;
+  flex: row;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: pink;
+  list-style: none;
+  gap: 15px;
+}
+
+

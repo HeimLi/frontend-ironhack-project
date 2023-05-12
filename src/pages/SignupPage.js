@@ -6,28 +6,23 @@ import authService from "../services/auth.service";
 function SignupPage(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
 
   const navigate = useNavigate();
-
   
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
-  const handleName = (e) => setName(e.target.value);
-
   
   const handleSignupSubmit = (e) => {
     e.preventDefault();
     // Create an object representing the request body
-    const requestBody = { email, password, name };
+    const requestBody = { email, password };
 
     // Make an axios request to the API
     // If POST request is successful redirect to login page
     // If the request resolves with an error, set the error message in the state
 
     // axios.post(`${API_URL}/auth/signup`, requestBody)    
-
     authService.signup(requestBody)
       .then((response) => {
         navigate("/LoginPage");
@@ -37,23 +32,20 @@ function SignupPage(props) {
         setErrorMessage(errorDescription);
       })
   };
-
   
   return (
     <div className="SignupPage">
       <h1>Sign up</h1>
       <br />
       <form onSubmit={handleSignupSubmit}>
-        <label>Email:</label>
+        <label> Email: </label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
-        <label>Password:</label>
+        <label> Password: </label>
         <input type="password" name="password" value={password} onChange={handlePassword} />
 
-        <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={handleName} />
         <br />
-        <Link to={"/LoginPage"}>Signup</Link>
+        <button type="submit" >Signup</button>
         <br />
       </form>
 
