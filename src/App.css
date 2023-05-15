@@ -64,9 +64,15 @@ html {
   flex: row;
   align-items: center;
   flex-wrap: wrap;
-  background-color: pink;
+  background-color: rgb(224, 215, 215);
   list-style: none;
   gap: 15px;
 }
+
+/* .emojiPng {
+  max-width: 10%;
+  min-height: 10vh;
+  background-color: rgb(224, 215, 215);
+} */
 
 

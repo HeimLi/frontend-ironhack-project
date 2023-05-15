@@ -4,7 +4,7 @@ import { AuthContext } from "../context/auth.context";
 import authService from "../services/auth.service";
 
 
-function loginPage(props) {
+function LoginPage(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
@@ -38,18 +38,18 @@ function loginPage(props) {
   };
   
   return (
-    <div className="loginPage">
+    <div className="LoginPage">
       <h1>Login</h1>
       <br />
       <form onSubmit={handleLoginSubmit}>
-        <label>Email:</label>
+        <label> Email: </label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
        
-        <label>Password:</label>
+        <label> Password: </label>
         <input type="password" name="password" value={password} onChange={handlePassword} />
         <br />
         <br />
-        <button type="submit"> Log in</button>
+        <button type="submit"> Log in </button>
       </form>
       { errorMessage && <p className="error-message">{errorMessage}</p> }
       <br />
@@ -59,4 +59,4 @@ function loginPage(props) {
   )
 }
 
-export default loginPage;
+export default LoginPage;
