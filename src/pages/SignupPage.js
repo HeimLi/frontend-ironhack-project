@@ -15,14 +15,8 @@ function SignupPage(props) {
   
   const handleSignupSubmit = (e) => {
     e.preventDefault();
-    // Create an object representing the request body
     const requestBody = { email, password };
-
-    // Make an axios request to the API
-    // If POST request is successful redirect to login page
-    // If the request resolves with an error, set the error message in the state
-
-    // axios.post(`${API_URL}/auth/signup`, requestBody)    
+    
     authService.signup(requestBody)
       .then((response) => {
         navigate("/LoginPage");

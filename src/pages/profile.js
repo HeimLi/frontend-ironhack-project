@@ -8,14 +8,14 @@ const Profile = () => {
     <div>
       <h1 style={{ display: 'none' }}>Profile</h1>
       <br />
-      <h2>Start a moodboard!</h2>
+      <h2> Start a moodboard! </h2>
       <br />
-      <h4>Should I quit my job?</h4>
-      <button><a href="/addMood">Start</a></button>
-      <h3 style={{ display: 'none' }}>Should I move?</h3>
-      <button style={{ display: 'none' }}><a href="/addMood">Track it.</a></button>
-      <h3 style={{ display: 'none' }}>Should I get a pet?</h3>
-      <button style={{ display: 'none' }}><a href="/addMood">Track it.</a></button>
+      <h4> Should I quit my job? </h4>
+      <button><a href="/addMood"> Start tracking your moods. </a></button>
+      <h3 className="hidden">Should I move?</h3>
+      <button className="hidden"><a href="/addMood">Track it.</a></button>
+      <h3 className="hidden">Should I get a pet?</h3>
+      <button className="hidden"><a href="/addMood">Track it.</a></button>
       <br />
       <br />
       <button><a href="/myMoods">My moodboard.</a></button>

@@ -7,13 +7,15 @@ const AddMood = () => {
   const [day, setDay] = useState(new Date().toLocaleDateString());
   const [daytime, setDaytime] = useState("");
   const [mood, setMood] = useState("");
-  const [selectedMood, setSelectedMood] = useState("");
   const [excitedChecked, setExcitedChecked] = useState(false); // Zustand für "excited" hinzugefügt
   const [happyChecked, setHappyChecked] = useState(false); 
   const [neutralChecked, setNeutralChecked] = useState(false);
   const [boredChecked, setBoredChecked] = useState(false);
   const [sadChecked, setSadChecked] = useState(false);
   const [depressedChecked, setDepressedChecked] = useState(false);
+  const [beforeWorkChecked, setBeforeWorkChecked] = useState(false);
+  const [afterWorkChecked, setAfterWorkChecked] = useState(false);
+  
 
   const context = useContext(AuthContext);
   const user = context.user
@@ -22,9 +24,18 @@ const AddMood = () => {
     setDay(e.target.value);
   }
 
-  const handleDaytime = (e) => {
+  const handleDaytimeBefore = (e) => {
     setDaytime(e.target.value);
+    setBeforeWorkChecked(true);
+    setAfterWorkChecked(false);
   }
+
+  const handleDaytimeAfter = (e) => {
+    setDaytime(e.target.value);
+    setAfterWorkChecked(true);
+    setBeforeWorkChecked(false);
+  }
+
 
   const handleMoodExcited = (e) => {
     setMood(e.target.value);
@@ -87,34 +98,35 @@ const AddMood = () => {
   }
 
   const handleSubmit = (e) => {
-  console.log("handle submit called")
-  e.preventDefault();
-  const token = localStorage.getItem("authToken");
-  axios.post("http://localhost:5005/api/moods/create", { day, daytime, mood, user: user._id }, { headers: { Authorization: `Bearer ${token}` } })
-    .then(res => {
-    })
-    .catch(err => {
-      console.error(err)
-    });
+    console.log("handle submit called")
+    e.preventDefault();
+    const token = localStorage.getItem("authToken");
+    axios.post("http://localhost:5005/api/moods/create", { day, daytime, mood, user: user._id }, { headers: { Authorization: `Bearer ${token}` } })
+      .then(res => {
+      })
+      .catch(err => {
+        console.error(err)
+      });
   }
  
   return (
     <div className="addMoodPage">
-      <h1>Add your current mood:</h1>
+      <h3>Add your current mood:</h3>
       <br />
       <form onSubmit={handleSubmit}>
-        <label style={{ display: 'none' }}> Date: </label>
-        <input style={{ display: 'none' }} type="day" name="day" value={day} onChange={handleDay} />
+        <label className="hidden"> Date: </label>
+        <input className="hidden" type="day" name="day" value={day} onChange={handleDay} />
         <br />
         <br />
-        <h4> Time: </h4>
+        <h4> Before or after work? </h4>
            <label className="hidden"> Daytime: </label>
            <br />
-           <label htmlFor="before work"> Before work </label>
-           <input id="before work" name="daytime" type="radio" value="before work" onChange={handleDaytime} />
-           <br />
-           <label htmlFor="after work"> After work </label>
-           <input id="after work" name="daytime" type="radio" value="after work" onChange={handleDaytime} />
+          <label className="hidden" htmlFor="before work"> Before work </label>
+          <label htmlFor="before work" role="img" className={`before_work ${beforeWorkChecked === true ? "selected_emoji_before" : ""}`} aria-label="before_work"> ▶️ </label>
+          <input className="hidden" id="before work" name="daytime" type="radio" value="before work" onChange={handleDaytimeBefore} />
+          <label className="hidden" htmlFor="after work"> After work </label>
+          <label htmlFor="after work" role="img" className={`after_work ${afterWorkChecked === true ? "selected_emoji_after" : ""}`} aria-label="after_work"> ⏹ </label>
+          <input className="hidden" id="after work" name="daytime" type="radio" value="after work" onChange={handleDaytimeAfter} />
         <br />
         <br />
         <div>

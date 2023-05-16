@@ -20,6 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 html {
@@ -87,6 +88,19 @@ html {
   gap: 15px;
 }
 
+.allCounts {
+  display: flex;
+  flex: row;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(224, 215, 215);
+  list-style: none;
+  gap: 15px;
+
+}
+
 .hidden {
   display: none;
 }
@@ -141,78 +155,100 @@ html {
   font-family: Noto Emoji;
   background-color: #E1F79C;
   border-radius: 50%;
+  font-size: 25px;
 }
 
 .selected_emoji_excited {
   font-family: Noto Emoji;
   background-color: #E1F79C;
   border-radius: 50%;
-  border: solid grey;
+  font-size: 40px;
 }
 
 .emoji_happy {
   font-family: Noto Emoji;
   background-color: #E1F79C;
   border-radius: 50%;
+  font-size: 25px;
 }
 
 .selected_emoji_happy {
   font-family: Noto Emoji;
   background-color: #E1F79C;
   border-radius: 50%;
-  border: solid grey;
+  font-size: 40px;
 }
 
 .emoji_neutral {
   font-family: Noto Emoji;
   background-color: #F2F2F0;
   border-radius: 50%;
+  font-size: 25px;
 }
 
 .selected_emoji_neutral {
   font-family: Noto Emoji;
   background-color: #F2F2F0;
   border-radius: 50%;
-  border: solid grey;
+  font-size: 40px;
 }
 
 .emoji_bored {
   font-family: Noto Emoji;
   background-color: #F2F2F0;
   border-radius: 50%;
+  font-size: 25px;
 }
 
 .selected_emoji_bored {
   font-family: Noto Emoji;
   background-color: #F2F2F0;
   border-radius: 50%;
-  border: solid grey;
+  font-size: 40px;
 }
 
 .emoji_sad {
   font-family: Noto Emoji;
   background-color: #EEA4CA;
   border-radius: 50%;
+  font-size: 25px;
 }
 
 .selected_emoji_sad {
   font-family: Noto Emoji;
   background-color: #EEA4CA;
   border-radius: 50%;
-  border: solid grey;
+  font-size: 40px;
 }
 
 .emoji_depressed {
   font-family: Noto Emoji;
   background-color: #EEA4CA;
   border-radius: 50%;
+  font-size: 25px;
 }
 
 .selected_emoji_depressed {
   font-family: Noto Emoji;
   background-color: #EEA4CA;
   border-radius: 50%;
-  border: solid grey;
+  font-size: 40px;
+}
+
+.before_work {
+  font-size: 25px;
+}
+
+.selected_emoji_before {
+  font-size: 40px;
+}
+
+.after_work {
+  font-size: 25px;
+}
+
+.selected_emoji_after {
+  font-size: 40px;
 }
 
 
