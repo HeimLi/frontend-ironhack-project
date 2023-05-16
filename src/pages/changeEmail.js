@@ -30,9 +30,9 @@ function UserProfile() {
       <h1>User Profile</h1>
       {isEditing ? (
         <div>
-          <label>Email:</label>
+          <label> Email: </label>
           <input type="email" value={email} onChange={handleEmailChange} />
-          <button onClick={handleSaveEmail}>Save</button>
+          <button onClick={handleSaveEmail}> Save </button>
         </div>
       ) : (
         <div>

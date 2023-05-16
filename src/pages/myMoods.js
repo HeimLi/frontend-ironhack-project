@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {useContext} from 'react';
 import {AuthContext} from "../context/auth.context";
-import neutralEmoji from "../assets/EmojiNeutral.png";
 
 
 const MyMoods = () => {
@@ -37,37 +36,35 @@ const user = context.user
     <div className="addMoodPage">
       <h1> My moodboard </h1>
       <h4>All moods:</h4>
-      <br />
       <ul className="showMoods">
       {moods.map((mood) => {
-        if (mood.user === user.email){
+        if (mood.user === user._id){
             return (
-                <li key={mood._id}>{getEmojiForMood(mood.mood)}</li>
-            )} 
+            <li key={mood._id}>{getEmojiForMood(mood.mood)}</li>
+        )} 
       })}
       </ul>
       <br />
       <br />
       <h2> Before work: </h2>
-      <br />
       <ul className="showMoods">
       {moods.map((mood) => {
-        if (mood.daytime === "before work" && (mood.user === user.email)) {
+        if (mood.daytime === "before work" && (mood.user === user._id)) {
             return (<li key={mood._id}>{getEmojiForMood(mood.mood)}</li>)
         }}
       )}
       </ul>
-      <h2> After work: </h2>
       <br />
+      <h2> After work: </h2>
       <ul className="showMoods">
       {moods.map((mood) => {
-        if (mood.daytime === "after work" && (mood.user === user.email)) {
+        if (mood.daytime === "after work" && (mood.user === user._id)) {
             return (<li key={mood._id}>{getEmojiForMood(mood.mood)}</li>)
-        }
-      }
+        }}
       )}
       </ul>
-      <br />
+    <button><a href="/addMood">Add mood</a></button>
+    <br />
     <button><a href="/Profile">Back to Profile</a></button>
     <br />
     <button><a href="/SignupPage">Logout</a></button>
@@ -76,23 +73,23 @@ const user = context.user
 
   function getEmojiForMood(mood) {
     switch (mood) {
-        case "exited":
-        return "🤩";
-        case "happy":
-        return "😊";
-        case "neutral":
-        return "😶";
-        // <img className="emojiPng" src={neutralEmoji} alt="neutralEmoji" />;
-        case "bored":
-        return "🥱";
-        case "sad":
-        return "😞";
-        case "depressed":
-        return "😭";
+      case "exited":
+        return <span className="emoji_positive"> 😸 </span>;
+      case "happy":
+        return <span className="emoji_positive"> 😺 </span>;
+      case "neutral":
+        return <span className="emoji"> 😽 </span>;
+      case "bored":
+        return <span className="emoji"> 😼 </span>;
+      case "sad":
+        return <span className="emoji_negative"> 😿 </span>;
+      case "depressed":
+        return <span className="emoji_negative"> 😹 </span>;
       default:
-        return "";
+        return null;
     }
   }
+  
 }
 
 export default MyMoods;

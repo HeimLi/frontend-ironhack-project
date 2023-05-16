@@ -8,8 +8,6 @@ import AddMood from './pages/addMood';
 import MyMoods from './pages/myMoods';
 import UserProfile from './pages/changeEmail';
 
-// import { useState } from "react";
-
 
 function App() {
   return (

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300&family=Raleway:wght@100;600;700;900&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +8,13 @@
 .App {
   text-align: center;
   border-radius: 2%;
-  border: 10px solid black;
+  border: 5px solid black;
   width: 450px;
   max-width: 100%;
   min-height: 100vh;
   height: 100vh;
   background-color: rgb(224, 215, 215);
+  /* box-shadow: 3px 5px 5px rgb(0,0,0,1); */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -58,10 +61,12 @@ html {
   }
 }
 
-.showMoods {
+.selectMood {
   flex-direction: row;
   display: flex;
   flex: row;
+  justify-content: center;
+  padding: 20px;
   align-items: center;
   flex-wrap: wrap;
   background-color: rgb(224, 215, 215);
@@ -69,10 +74,149 @@ html {
   gap: 15px;
 }
 
-/* .emojiPng {
-  max-width: 10%;
-  min-height: 10vh;
+.showMoods {
+  flex-direction: row;
+  display: flex;
+  flex: row;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: rgb(224, 215, 215);
-} */
+  list-style: none;
+  gap: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.emoji {
+  font-family: Noto Emoji;
+  background-color: #F2F2F0;
+  border-radius: 50%;
+}
+
+.emoji_positive {
+  font-family: Noto Emoji;
+  background-color: #E1F79C;
+  border-radius: 50%;
+}
+
+.emoji_negative {
+  font-family: Noto Emoji;
+  background-color: #EEA4CA;
+  border-radius: 50%;
+}
+
+#excited {
+  display: none;
+}
+
+#happy {
+  display: none;
+}
+
+#neutral {
+  display: none;
+}
+
+#bored {
+  display: none;
+}
+
+#sad {
+  display: none;
+}
+
+#depressed {
+  display: none;
+}
+
+.selected {
+  color: green;
+}
+
+.emoji_excited {
+  font-family: Noto Emoji;
+  background-color: #E1F79C;
+  border-radius: 50%;
+}
+
+.selected_emoji_excited {
+  font-family: Noto Emoji;
+  background-color: #E1F79C;
+  border-radius: 50%;
+  border: solid grey;
+}
+
+.emoji_happy {
+  font-family: Noto Emoji;
+  background-color: #E1F79C;
+  border-radius: 50%;
+}
+
+.selected_emoji_happy {
+  font-family: Noto Emoji;
+  background-color: #E1F79C;
+  border-radius: 50%;
+  border: solid grey;
+}
+
+.emoji_neutral {
+  font-family: Noto Emoji;
+  background-color: #F2F2F0;
+  border-radius: 50%;
+}
+
+.selected_emoji_neutral {
+  font-family: Noto Emoji;
+  background-color: #F2F2F0;
+  border-radius: 50%;
+  border: solid grey;
+}
+
+.emoji_bored {
+  font-family: Noto Emoji;
+  background-color: #F2F2F0;
+  border-radius: 50%;
+}
+
+.selected_emoji_bored {
+  font-family: Noto Emoji;
+  background-color: #F2F2F0;
+  border-radius: 50%;
+  border: solid grey;
+}
+
+.emoji_sad {
+  font-family: Noto Emoji;
+  background-color: #EEA4CA;
+  border-radius: 50%;
+}
+
+.selected_emoji_sad {
+  font-family: Noto Emoji;
+  background-color: #EEA4CA;
+  border-radius: 50%;
+  border: solid grey;
+}
+
+.emoji_depressed {
+  font-family: Noto Emoji;
+  background-color: #EEA4CA;
+  border-radius: 50%;
+}
+
+.selected_emoji_depressed {
+  font-family: Noto Emoji;
+  background-color: #EEA4CA;
+  border-radius: 50%;
+  border: solid grey;
+}
+
+
+
+
 
 
