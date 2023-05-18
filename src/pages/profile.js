@@ -11,24 +11,22 @@ const Profile = () => {
       <h2> Start a moodboard! </h2>
       <br />
       <h4> Should I quit my job? </h4>
-      <button><a href="/addMood"> Start tracking your moods. </a></button>
-      <h3 className="hidden">Should I move?</h3>
-      <button className="hidden"><a href="/addMood">Track it.</a></button>
-      <h3 className="hidden">Should I get a pet?</h3>
-      <button className="hidden"><a href="/addMood">Track it.</a></button>
+      <br />
+      <a className="a-button" href="/addMood"> Start tracking </a>
       <br />
       <br />
-      <button><a href="/myMoods">My moodboard.</a></button>
+      <a className="important-button" href="/myMoods">My moodboard.</a>
       <br />
       <br />
       <br />
-      <h3>Profil</h3>
+      <h3>Profile</h3>
       <span>{user?.email}</span>
       <br />
-      <button><a href="/changeEmail">Change Email</a></button>
+      <br />
+      <a className="a-button" href="/changeEmail">Change Email</a>
       <br />
       <br />
-      <button><a href="/SignupPage">Logout</a></button>
+      <a className="a-button" href="/SignupPage">Logout</a>
     </div>
   );
 };

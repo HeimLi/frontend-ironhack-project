@@ -39,14 +39,17 @@ function SignupPage(props) {
         <input type="password" name="password" value={password} onChange={handlePassword} />
 
         <br />
-        <button type="submit" >Signup</button>
+        <br />
+        <button className="a-button" type="submit" >Signup</button>
+        <br />
         <br />
       </form>
 
       { errorMessage && <p className="error-message">{errorMessage}</p> }
 
       <p>Already have account?</p>
-      <Link to={"/LoginPage"}>Login</Link>
+      <br />
+      <a className="a-button" href="/LoginPage">Login</a>
     </div>
   )
 }

@@ -7,9 +7,10 @@ const Home = () => {
       <h1>Not sure?</h1>
       <h1>Just track it.</h1>
       <br />
-      <Link to={"/signupPage"}> Sign Up</Link>
+      <a className="a-button" href="/signupPage"> Sign Up</a>
       <br></br>
-      <Link to={"/LoginPage"}> Log in</Link>
+      <br />
+      <a className="a-button" href="/LoginPage"> Log in</a>
     </div>
   );
 };

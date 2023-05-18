@@ -30,20 +30,24 @@ function UserProfile() {
       <h1>User Profile</h1>
       {isEditing ? (
         <div>
+          <br />
           <label> Email: </label>
           <input type="email" value={email} onChange={handleEmailChange} />
-          <button onClick={handleSaveEmail}> Save </button>
+          <br />
+          <br />
+          <button className="a-button" onClick={handleSaveEmail}> Save </button>
         </div>
       ) : (
         <div>
           <span>Email: {user?.email}</span>
           <br />
-          <button onClick={() => setIsEditing(true)}>Edit</button>
+          <button className="a-button" onClick={() => setIsEditing(true)}>Edit</button>
           <br />
           <br />
-          <button><a href="/Profile">Back to Profile</a></button>
+          <a className="a-button" href="/Profile">Back to Profile</a>
           <br />
-          <button><a href="/SignupPage">Logout</a></button>
+          <br />
+          <a className="a-button" href="/SignupPage">Logout</a>
         </div>
       )}
     </div>

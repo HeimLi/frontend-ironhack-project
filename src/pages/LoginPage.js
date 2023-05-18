@@ -43,18 +43,19 @@ function LoginPage(props) {
       <br />
       <form onSubmit={handleLoginSubmit}>
         <label> Email: </label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
+        <input className="inField" type="email" name="email" value={email} onChange={handleEmail} />
        
         <label> Password: </label>
         <input type="password" name="password" value={password} onChange={handlePassword} />
         <br />
         <br />
-        <button type="submit"> Log in </button>
+        <button className="a-button" href="/profile" type="submit"> Log in </button>
       </form>
       { errorMessage && <p className="error-message">{errorMessage}</p> }
       <br />
       <p>Don't have an account yet?</p>
-      <Link to={"/signupPage"}> Sign Up</Link>
+      <br />
+      <a className="a-button" href="/signupPage"> Sign Up</a>
     </div>
   )
 }

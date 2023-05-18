@@ -7,6 +7,8 @@ import Profile from './pages/profile';
 import AddMood from './pages/addMood';
 import MyMoods from './pages/myMoods';
 import UserProfile from './pages/changeEmail';
+import BeforeWork from './pages/beforeWork';
+import AfterWork from './pages/afterWork';
 
 
 function App() {
@@ -20,10 +22,11 @@ function App() {
         <Route exact path="/addMood" element={<AddMood />} />
         <Route exact path="/myMoods" element={<MyMoods />} />
         <Route exact path="/changeEmail" element={<UserProfile />} />
+        <Route exact path="/beforeWork" element={<BeforeWork />} />
+        <Route exact path="/afterWork" element={<AfterWork />} />
       </Routes>
     </div>
   );
 }
-
 
 export default App;

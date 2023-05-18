@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300&family=Raleway:wght@100;600;700;900&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,900;1,900&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
 
 * {
   margin: 0;
@@ -8,11 +8,10 @@
 .App {
   text-align: center;
   border-radius: 2%;
-  border: 5px solid black;
+  border: 3px solid black;
   width: 450px;
   max-width: 100%;
   min-height: 100vh;
-  height: 100vh;
   background-color: rgb(224, 215, 215);
   /* box-shadow: 3px 5px 5px rgb(0,0,0,1); */
   margin: 0 auto;
@@ -30,12 +29,6 @@ html {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -60,6 +53,77 @@ html {
   to {
     transform: rotate(360deg);
   }
+}
+
+.link {
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+h4 {
+  font-weight: 100;
+}
+
+h5 {
+  font-weight: 100;
+}
+
+input {
+  font-weight: 100;
+  font-family: "Raleway", sans-serif;
+  padding: 2px;
+  background-color: whitesmoke;
+}
+
+span {
+  font-weight: 100;
+}
+
+p {
+  font-weight: 100;
+}
+
+label {
+  font-weight: 100;
+}
+
+li {
+  font-weight: 100;
+}
+
+.a-button {
+  font-size: 13px;
+  padding: 7px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  color: black;
+  text-decoration: none;
+  background-color: whitesmoke;
+  border: transparent 2px black;
+  border-radius: 10px;
+}
+
+.important-button {
+  font-size: 20px;
+  padding: 7px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  color: black;
+  text-decoration: none;
+  background-color: whitesmoke;
+  border: 2px black;
+  border-radius: 10px;
 }
 
 .selectMood {
@@ -98,7 +162,6 @@ html {
   background-color: rgb(224, 215, 215);
   list-style: none;
   gap: 15px;
-
 }
 
 .hidden {
@@ -147,15 +210,12 @@ html {
   display: none;
 }
 
-.selected {
-  color: green;
-}
 
 .emoji_excited {
   font-family: Noto Emoji;
   background-color: #E1F79C;
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .selected_emoji_excited {
@@ -169,7 +229,7 @@ html {
   font-family: Noto Emoji;
   background-color: #E1F79C;
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .selected_emoji_happy {
@@ -181,28 +241,28 @@ html {
 
 .emoji_neutral {
   font-family: Noto Emoji;
-  background-color: #F2F2F0;
+  background-color: whitesmoke;
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .selected_emoji_neutral {
   font-family: Noto Emoji;
-  background-color: #F2F2F0;
+  background-color: whitesmoke;
   border-radius: 50%;
   font-size: 40px;
 }
 
 .emoji_bored {
   font-family: Noto Emoji;
-  background-color: #F2F2F0;
+  background-color: whitesmoke;
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .selected_emoji_bored {
   font-family: Noto Emoji;
-  background-color: #F2F2F0;
+  background-color: whitesmoke;
   border-radius: 50%;
   font-size: 40px;
 }
@@ -211,7 +271,7 @@ html {
   font-family: Noto Emoji;
   background-color: #EEA4CA;
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .selected_emoji_sad {
@@ -225,7 +285,7 @@ html {
   font-family: Noto Emoji;
   background-color: #EEA4CA;
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .selected_emoji_depressed {
@@ -235,20 +295,38 @@ html {
   font-size: 40px;
 }
 
+.logo_before {
+  font-size: 100px;
+  font-family: Noto Emoji;
+}
+
+.logo_after {
+  font-size: 100px;
+  font-family: Noto Emoji;
+}
+
 .before_work {
-  font-size: 25px;
+  font-weight: 200;
+  font-size: 35px;
+  font-family: Noto Emoji;
 }
 
 .selected_emoji_before {
-  font-size: 40px;
+  font-weight: 200;
+  font-size: 45px;
+  font-family: Noto Emoji;
 }
 
 .after_work {
-  font-size: 25px;
+  font-weight: 200;
+  font-size: 35px;
+  font-family: Noto Emoji;
 }
 
 .selected_emoji_after {
-  font-size: 40px;
+  font-weight: 200;
+  font-size: 45px;
+  font-family: Noto Emoji;
 }
 
 

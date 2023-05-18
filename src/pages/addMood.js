@@ -118,14 +118,14 @@ const AddMood = () => {
         <input className="hidden" type="day" name="day" value={day} onChange={handleDay} />
         <br />
         <br />
-        <h4> Before or after work? </h4>
+        <h4> Before or after work?</h4>
            <label className="hidden"> Daytime: </label>
            <br />
           <label className="hidden" htmlFor="before work"> Before work </label>
-          <label htmlFor="before work" role="img" className={`before_work ${beforeWorkChecked === true ? "selected_emoji_before" : ""}`} aria-label="before_work"> ▶️ </label>
+          <label htmlFor="before work" role="img" className={`before_work ${beforeWorkChecked === true ? "selected_emoji_before" : ""}`} aria-label="before_work"> 🌅 </label>
           <input className="hidden" id="before work" name="daytime" type="radio" value="before work" onChange={handleDaytimeBefore} />
           <label className="hidden" htmlFor="after work"> After work </label>
-          <label htmlFor="after work" role="img" className={`after_work ${afterWorkChecked === true ? "selected_emoji_after" : ""}`} aria-label="after_work"> ⏹ </label>
+          <label htmlFor="after work" role="img" className={`after_work ${afterWorkChecked === true ? "selected_emoji_after" : ""}`} aria-label="after_work"> 🍻 </label>
           <input className="hidden" id="after work" name="daytime" type="radio" value="after work" onChange={handleDaytimeAfter} />
         <br />
         <br />
@@ -159,14 +159,16 @@ const AddMood = () => {
         </div>
         </div>
         <br />
-        <button type="submit">Save</button>
+        <button className="a-button" type="submit">Save</button>
         <br />
         <br />
-        <button><a href="/myMoods">My moodboard</a></button>
+        <a className="a-button" href="/myMoods">My moodboard</a>
         <br />
-        <button><a href="/Profile">Back to Profile</a></button>
         <br />
-        <button><a href="/SignupPage">Logout</a></button>
+        <a className="a-button" href="/Profile">Back to Profile</a>
+        <br />
+        <br />
+        <a className="a-button" href="/SignupPage">Logout</a>
       </form>
     </div>
   );
