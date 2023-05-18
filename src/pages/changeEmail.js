@@ -17,7 +17,7 @@ function UserProfile() {
 
   const handleSaveEmail = () => {
     const token = localStorage.getItem("authToken");      
-    axios.put(`${API_URL}/api/user/` + user._id + '/email', { email }, { headers: { Authorization: `Bearer ${token}` } })
+    axios.put(`${process.env.REACT_APP_API_URL}/api/user/` + user._id + '/email', { email }, { headers: { Authorization: `Bearer ${token}` } })
       .then(response => {
         setIsEditing(false);
       })

@@ -26,7 +26,7 @@ const handleButtonClick = () => {
     if ((excitedCount + happyCount) > (sadCount + depressedCount)) {
       setNotificationMessage("Your seems to make you happy - Enjoy it!");
       setShowNotification(true);}
-    if ((excitedCount + happyCount) < (sadCount + depressedCount)) {
+    else if ((excitedCount + happyCount) < (sadCount + depressedCount)) {
         setNotificationMessage("Your job makes you unhappy - Think about quitting it.");
         setShowNotification(true);}
     else if (((excitedCount + happyCount) < (neutralCount + boredCount)) && ((excitedCount + happyCount) > (sadCount + depressedCount))) {
@@ -34,7 +34,7 @@ const handleButtonClick = () => {
         setShowNotification(true);
     } else {
       setNotificationMessage("Test");
-      setShowNotification(false);
+      setShowNotification(true);
     }
   };
 
@@ -44,7 +44,7 @@ const fetchAPI=() => {
     const daytime = 'exampleDaytime';
     const mood = 'exampleMood';
     const token = localStorage.getItem("authToken");
-    axios.get("http://localhost:5005/api/moods", { headers: { Authorization: `Bearer ${token}` }})
+    axios.get(`${process.env.REACT_APP_API_URL}/api/moods`, { headers: { Authorization: `Bearer ${token}` }})
     .then(res => {
         setMoods(res.data);
       })

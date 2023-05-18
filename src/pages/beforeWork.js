@@ -22,11 +22,12 @@ const [showNotification, setShowNotification] = useState(false);
 const [notificationMessage, setNotificationMessage] = useState('');
 
 const handleButtonClick = () => {
+  console.log("working");
     // checking variable and connect it with notification
     if ((excitedCount + happyCount) > (sadCount + depressedCount)) {
       setNotificationMessage("You seem happy to go to work!");
       setShowNotification(true);}
-    if ((excitedCount + happyCount) < (sadCount + depressedCount)) {
+    else if ((excitedCount + happyCount) < (sadCount + depressedCount)) {
         setNotificationMessage("Even before the job, negative emotions prevail - Think about quitting.");
         setShowNotification(true);}
     else if (((excitedCount + happyCount) < (neutralCount + boredCount)) && ((excitedCount + happyCount) > (sadCount + depressedCount))) {
@@ -34,8 +35,9 @@ const handleButtonClick = () => {
         setShowNotification(true);
     } else {
       setNotificationMessage("Test");
-      setShowNotification(false);
+      setShowNotification(true);
     }
+    console.log(notificationMessage);
   };
 
 // accessing the database

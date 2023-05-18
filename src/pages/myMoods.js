@@ -26,7 +26,7 @@ const handleButtonClick = () => {
     if ((excitedCount + happyCount) > (sadCount + depressedCount)) {
       setNotificationMessage("Happyness prevails - Enjoy jour job!");
       setShowNotification(true);}
-    if ((excitedCount + happyCount) < (sadCount + depressedCount)) {
+    else if ((excitedCount + happyCount) < (sadCount + depressedCount)) {
         setNotificationMessage("Negative emotions prevail - Think about quitting your job.");
         setShowNotification(true);}
     else if (((excitedCount + happyCount) < (neutralCount + boredCount)) && ((excitedCount + happyCount) > (sadCount + depressedCount))) {
@@ -34,10 +34,9 @@ const handleButtonClick = () => {
         setShowNotification(true);
     } else {
       setNotificationMessage("Test");
-      setShowNotification(false);
+      setShowNotification(true);
     }
   };
-
 
 // accessing the database
 const fetchAPI=() => {
