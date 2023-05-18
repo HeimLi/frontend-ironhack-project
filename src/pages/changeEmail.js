@@ -9,8 +9,6 @@ function UserProfile() {
   const [email, setEmail] = useState(user?.email || ''); // Initialer Wert auf leeren String setzen
   const [isEditing, setIsEditing] = useState(false);
 
-  const API_URL = process.env.REACT_APP_SERVER_URL
-
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
