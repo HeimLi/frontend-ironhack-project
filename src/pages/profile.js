@@ -15,7 +15,7 @@ const Profile = () => {
       <a className="a-button" href="/addMood"> Start tracking </a>
       <br />
       <br />
-      <a className="important-button" href="/myMoods">My moodboard.</a>
+      <a className="important-button" href="/myMoods">My moodboard.</a> 
       <br />
       <br />
       <br />

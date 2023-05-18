@@ -45,7 +45,7 @@ const fetchAPI=() => {
     const daytime = 'exampleDaytime';
     const mood = 'exampleMood';
     const token = localStorage.getItem("authToken");
-    axios.get("http://localhost:5005/api/moods", { headers: { Authorization: `Bearer ${token}` }})
+    axios.get(`${process.env.REACT_APP_API_URL}/api/moods`, { headers: { Authorization: `Bearer ${token}` }})
     .then(res => {
         setMoods(res.data);
       })

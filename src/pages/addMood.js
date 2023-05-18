@@ -101,7 +101,7 @@ const AddMood = () => {
     console.log("handle submit called")
     e.preventDefault();
     const token = localStorage.getItem("authToken");
-    axios.post("http://localhost:5005/api/moods/create", { day, daytime, mood, user: user._id }, { headers: { Authorization: `Bearer ${token}` } })
+    axios.post(`${process.env.REACT_APP_API_URL}/api/moods/create`, { day, daytime, mood, user: user._id }, { headers: { Authorization: `Bearer ${token}` } })
       .then(res => {
       })
       .catch(err => {
